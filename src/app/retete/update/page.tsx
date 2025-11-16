@@ -75,10 +75,18 @@ export default function EditareRetetaPage() {
       if (image) {
         formData.append("image", image);
       }
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("Nu ești autentificat.");
+        return;
+      }
 
       const res = await fetch(`${API}/retete/${id}`, {
         method: "PUT",
         body: formData,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       if (res.ok) {

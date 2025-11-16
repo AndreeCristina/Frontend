@@ -54,7 +54,7 @@ export default function InregistrarePage() {
 
       if (res.ok) {
         const data = await res.json();
-        localStorage.setItem("token", data.token);
+        //localStorage.setItem("token", data.token);
         setMsg("Contul a fost creat cu succes!");
         seNumeUtilizator("");
         setParola("");

@@ -16,7 +16,17 @@ export default function ListaRetetePage() {
       setLoading(true);
       setEroare(null);
 
-      const res = await fetch(`${API}/retete`);
+      const token = localStorage.getItem("token");
+      if (!token) {
+        setEroare("Nu ești autentificat.");
+        return;
+      }
+
+      const res = await fetch(`${API}/retete`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       if (!res.ok) throw new Error("Nu pot încărca rețetele.");
 
@@ -37,9 +47,18 @@ export default function ListaRetetePage() {
     const confirmare = window.confirm("Sigur vrei să ștergi această rețetă?");
     if (!confirmare) return;
 
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Nu ești autentificat.");
+      return;
+    }
+
     try {
       const res = await fetch(`${API}/retete/${id}`, {
         method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       if (!res.ok) {

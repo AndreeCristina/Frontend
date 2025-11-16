@@ -46,9 +46,18 @@ export default function AdaugareRetetaPage() {
       formData.append("dificultate", dificultate);
       formData.append("image", image);
 
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("Nu ești autentificat.");
+        return;
+      }
+
       const res = await fetch(`${API}/retete`, {
         method: "POST",
-        body: formData, // NU setăm Content-Type!
+        body: formData,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       if (res.ok) {
