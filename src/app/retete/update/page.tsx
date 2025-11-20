@@ -3,15 +3,22 @@
 export const dynamic = "force-dynamic";
 
 import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 import { API } from "../../../../lib/lib";
 
-export default function EditareRetetaPage() {
+type EditareRetetaPageProps = {
+  searchParams: {
+    id?: string;
+  };
+};
+
+export default function EditareRetetaPage({
+  searchParams,
+}: EditareRetetaPageProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const id = searchParams.id || "";
   const [titlu, setTitlu] = useState("");
   const [descriere, setDescriere] = useState("");
   const [timp, setTimp] = useState("");
