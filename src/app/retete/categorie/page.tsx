@@ -17,7 +17,18 @@ export default function ListaRetetePage() {
   async function fetchRetete() {
     try {
       setLoading(true);
-      const res = await fetch(`${API}/retete`);
+
+      const token = localStorage.getItem("token");
+      if (!token) {
+        setEroare("Nu ești autentificat.");
+        return;
+      }
+
+      const res = await fetch(`${API}/retete`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       if (!res.ok) throw new Error("Nu pot încărca rețetele.");
 
       const data = await res.json();
