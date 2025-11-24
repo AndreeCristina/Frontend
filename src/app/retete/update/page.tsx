@@ -5,13 +5,12 @@ type PageProps = {
   searchParams: { id?: string };
 };
 
-export default async function Page({ searchParams }: PageProps) {
-  const { id } = await searchParams;
-  const safeId = id || "";
+export default function Page({ searchParams }: PageProps) {
+  const id = searchParams.id ?? "";
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <EditareRetetaClient id={safeId} />
+      <EditareRetetaClient id={id} />
     </Suspense>
   );
 }
