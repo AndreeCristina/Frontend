@@ -6,11 +6,11 @@ type PageProps = {
 };
 
 export default function Page({ searchParams }: PageProps) {
-  const id = searchParams.id ?? "";
+  const iD = searchParams.id ?? "";
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <EditareRetetaClient id={id} />
+      <EditareRetetaClient id={iD} />
     </Suspense>
   );
 }
