@@ -64,8 +64,10 @@ export default function InregistrarePage() {
         return;
       }
 
-      if (res.status === 400) {
-        setMsg("Bad request.");
+      const data = await res.json();
+
+      if (!res.ok) {
+        setMsg(data.message);
         return;
       }
 
