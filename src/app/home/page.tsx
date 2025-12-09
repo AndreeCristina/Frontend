@@ -39,6 +39,13 @@ export default function Page() {
             >
               DECONECTEAZĂ-TE
             </Link>
+
+            <Link
+              href="/profil"
+              className="font-extrabold text-white text-xs sm:text-sm bg-violet-500 hover:bg-violet-800 rounded-full px-3 py-2"
+            >
+              DETALII PROFIL
+            </Link>
           </nav>
         </header>
 
