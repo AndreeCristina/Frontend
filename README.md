@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GustArte
 
-## Getting Started
+## 📁 Repository
 
-First, run the development server:
+https://github.com/dashboard
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Cerințe pentru instalare
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [PostgreSql](https://www.postgresql.org/download/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⬇️ Pași de descărcare a proiectului
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Descărcare ca arhivă `.zip`
 
-## Learn More
+1. Există două foldere denumite Frontend și Backend.
+2. Accesează fiecare repository din link-ul de mai sus.
+3. Intră în fiecare și apasă pe **Downloads**.
+4. Descarcă arhiva ZIP și extrage fișierele local.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Pași de rulare
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Deschide terminalul în directorul `Frontend`
+2. Rulează:
+   npm run dev
+3. Aplicația se va lansa automat
 
-## Deploy on Vercel
+### Backend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Deschide terminalul în directorul `Backend`
+2. Rulează:
+   node server.js
+3. Se va deschide un server care se regăsește la adresa
+   `http://localhost:8383`
