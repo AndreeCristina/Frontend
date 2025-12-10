@@ -2,7 +2,7 @@
 
 ## 📁 Repository
 
-https://github.com/dashboard
+https://github.com/AndreeCristina?tab=repositories
 
 ## 🛠 Cerințe pentru instalare
 
