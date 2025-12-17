@@ -106,7 +106,7 @@ export default function ListaRetetePage() {
 
               {r.imageUrl && (
                 <img
-                  src={`http://localhost:8383${r.imageUrl}`}
+                  src={`${API!.replace("/api", "")}${r.imageUrl}`}
                   className="w-full h-40 object-cover rounded mt-3"
                 />
               )}
